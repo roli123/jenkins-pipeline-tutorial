@@ -3,7 +3,7 @@ RUN apk add build-base
 COPY . /code
 WORKDIR /code
 
-RUN go mod init github.com/niranjankl/jenkins-pipeline-tutorial
+RUN go mod init github.com/roli123/jenkins-pipeline-tutorial.git
 # Run unit tests
 RUN go test
 
