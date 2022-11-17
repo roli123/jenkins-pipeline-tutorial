@@ -1,11 +1,12 @@
 FROM golang:alpine as builder
 RUN apk add build-base
+RUN apk add git
 COPY . /code
 WORKDIR /code
 
-RUN go mod init github.com/roli123/jenkins-pipeline-tutorial.git
+RUN go mod init github.com/niranjankl/jenkins-pipeline-tutorial
 # Run unit tests
-RUN go test
+#RUN go test
 
 # Build app
 RUN go build -o sample-app
